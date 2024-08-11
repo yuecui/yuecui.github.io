@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            margin: 0;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        #sidebar {
+            width: 200px;
+            margin-right: 20px;
+        }
+        #sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        #sidebar li {
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        #sidebar li:hover {
+            background-color: #0056b3;
+        }
+        #flashcard-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+        }
+        #flashcard {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 600px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+        #controls {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            width: 300px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:disabled {
+            background-color: #ccc;
+        }
+        #saved-words {
+            margin-top: 40px;
+            width: 400px;
+        }
+        #saved-words h3 {
+            margin-bottom: 10px;
+        }
+        #saved-words pre {
+            background: #e9ecef;
+            padding: 10px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        #word {
+            font-size:40px;
+            font-weight: bold;
+        }
+        #definition {
+            font-style: italic;
+            font-size: 30px;
+            margin-top: 40px;
+        }
+        #example_sentence {
+          
+            margin-top: 40px;
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="sidebar">
+    <ul id="wordList"></ul>
+</div>
+
+<div id="flashcard-container">
+    <div id="flashcard">
+        <div id="word"></div>
+        <div id="definition" class="hidden"></div>
+        <div id="example_sentence" class="hidden"></div>
+    </div>
+
+    <div id="controls">
+        <button id="prevBtn" onclick="prevCard()" disabled>Previous</button>
+        <button id="nextBtn" onclick="nextCard()">Next</button>
+    </div>
+
+    <button id="saveWordBtn" onclick="saveWord()">Save Word</button>
+
+    <div id="saved-words">
+        <h3>Saved Words:</h3>
+        <pre id="savedWordsList"></pre>
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
