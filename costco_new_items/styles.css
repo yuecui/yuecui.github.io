@@ -1,11 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
     background-color: #f0f0f0;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
 }
 
 .slideshow-container {
@@ -27,9 +35,10 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 20px; /* Increased padding */
     cursor: pointer;
-    font-size: 18px;
+    font-size: 36px; /* Increased font-size for larger arrows */
+    border-radius: 50%; /* Optional: Makes the button circular */
 }
 
 .prev {
@@ -42,4 +51,24 @@ body {
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Style for the link below the slider */
+.link-container {
+    margin-top: 20px;
+}
+
+.slider-link {
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: #0066cc;
+    border: 2px solid #0066cc;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.slider-link:hover {
+    background-color: #0066cc;
+    color: white;
 }

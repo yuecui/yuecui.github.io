@@ -18,5 +18,3 @@ function prevSlide() {
     slideshow.src = images[currentImageIndex];
 }
 
-// Auto change image every 3 seconds
-setInterval(nextSlide, 3000);
