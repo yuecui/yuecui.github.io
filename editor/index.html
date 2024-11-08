@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TEI Text Editor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div id="tag-list">
+    <h3>Available Tags</h3>
+    <div class="tag" onclick="selectTag('name')">&lt;name&gt;</div>
+    <div class="tag" onclick="selectTag('place')">&lt;place&gt;</div>
+    <div class="tag" onclick="selectTag('quote')">&lt;quote&gt;</div>
+    <div class="tag" onclick="selectTag('p')">&lt;p&gt;</div>
+
+
+    <div class="mode-buttons">
+      <button id="quick-edit-mode" onclick="toggleQuickEditMode()">Quick Editing Mode</button>
+    </div>
+
+    <h3>Editor Settings</h3>
+    <label for="font-family">Font Family:</label>
+    <select id="font-family" onchange="changeFontFamily()">
+      <option value="'Courier New', Courier, monospace">Courier New</option>
+      <option value="Arial, sans-serif">Arial</option>
+      <option value="'Times New Roman', Times, serif">Times New Roman</option>
+      <option value="'Roboto', sans-serif">Roboto</option>
+    </select>
+
+    <label for="font-size">Font Size:</label>
+    <select id="font-size" onchange="changeFontSize()">
+      <option value="14px">14px</option>
+      <option value="16px" selected>16px</option>
+      <option value="18px">18px</option>
+      <option value="20px">20px</option>
+    </select>
+
+    <button id="verify-all-tags" onclick="verifyAllTags()">Verify All Tags</button>
+
+  </div>
+
+  <div id="editor">
+    <h3>Editor</h3>
+    <div id="text-editor" contenteditable="true" oninput="highlightSyntax()"></div>
+    <div id="tagged-elements">
+      <h4>Tagged Elements</h4>
+      <ul id="tagged-list"></ul>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
