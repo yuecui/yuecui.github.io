@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Frontend Python Autograder — Multi-Card</title>
+
+  <!-- CodeMirror -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Pure Frontend Python Autograder — Multi-Card</h1>
+    <p>Each function has its own editor and results. Tests are loaded from separate JSON files per function.</p>
+  </header>
+
+  <div class="container" id="container"></div>
+
+  <!-- Libraries -->
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/python/python.min.js"></script>
+
+  <!-- App Logic -->
+ <script src="app.js"></script>
+<script>
+
+document.addEventListener('click', function(e){
+var el = e.target.closest('.hint-text');
+if (!el) return;
+el.classList.toggle('revealed');
+});
+</script>
+</body>
+</html>
