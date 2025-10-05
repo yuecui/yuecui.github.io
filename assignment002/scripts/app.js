@@ -149,7 +149,7 @@ function initHintToggles(scopeEl) {
 }
 
 async function fetchTests(name) {
-  const res = await fetch(`tests/${name}.json`, { cache: 'no-store' });
+  const res = await fetch(`../tests/${name}.json`, { cache: 'no-store' });
   if (!res.ok) throw new Error(`Failed to load tests/${name}.json`);
   return res.json();
 }
