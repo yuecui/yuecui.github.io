@@ -249,11 +249,11 @@ function createPair(card) {
       <h2>YOUR CODE — ${card.name}</h2>
       ${renderHintsTop(card)}
       <div class="desc">${card.description}</div>
-      <div class="pill">Runtime: Pyodide • no server</div>
+      <div class="pill">Runtime: Pyodide</div>
       <textarea></textarea>
       <div class="toolbar">
         <button class="run">▶ Run Tests</button>
-        <span class="foot">Tests: <code>../tests/${card.name}.json</code></span>
+        
       </div>
     </div>`;
 
