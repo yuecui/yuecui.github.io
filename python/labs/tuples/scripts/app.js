@@ -166,27 +166,40 @@ const CARDS = [
     hints: ['Validate equal lengths.', 'Iterate with zip.', 'Build (x,y,city) tuples.']
   },
 
-  {
-    name: 'find_first_occurrence',
-    description: 'Binary search: first index of target in sorted tuple.',
-    starter:
+{
+  name: 'find_first_occurrence',
+  description: 'Binary search (bounded): first index of target between start and stop.',
+  starter:
 `def find_first_occurrence(nums: tuple[int, ...], target: int, start: int, stop: int) -> int:
-    """Binary search: first index of target, or -1."""
+    """Binary search (bounded): first index of target, or -1."""
     pass
 `,
-    hints: ['Use left/right pointers.', 'Move right to mid-1 when found (search left).', 'Return -1 if absent.']
-  },
-
-  {
-    name: 'find_last_occurrence',
-    description: 'Binary search: last index of target in sorted tuple.',
-    starter:
-`def find_last_occurrence(nums: tuple[int, ...], target: int, start: int, stop: int) -> int:
-    """Binary search: last index of target, or -1."""
-    pass
-`,
-    hints: ['Use left/right pointers.', 'Move left to mid+1 when found (search right).', 'Return -1 if absent.']
-  },
+  hints: [
+    'What are the base cases and what are the recursive cases?',
+    'Use start and stop as your search boundaries.',
+    'Compute mid = (start + stop) // 2.',
+    'If nums[mid] == target, continue to search the left half (start to mid-1).',
+    'Return -1 if target not found.'
+  ]
+}
+,
+ {
+  name: 'find_last_occurrence',
+  description: 'Binary search (bounded): last index of target between start and stop.',
+  starter:
+  `def find_last_occurrence(nums: tuple[int, ...], target: int, start: int, stop: int) -> int:
+      """Binary search (bounded): last index of target, or -1."""
+      pass
+  `,
+  hints: [
+    'What are the base cases and what are the recursive cases?',
+    'Use start and stop as your search boundaries.',
+    'Compute mid = (start + stop) // 2.',
+    'If nums[mid] == target, continue to search right half (mid+1 to stop).',
+    'Return -1 if not found.'
+  ]
+}
+,
 
   {
     name: 'binary_search_range',
