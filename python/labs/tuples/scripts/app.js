@@ -253,6 +253,7 @@ function createPair(card) {
       <textarea></textarea>
       <div class="toolbar">
         <button class="run">▶ Run Tests</button>
+        <span class="foot">Tests: <code>../tests/${card.name}.json</code></span>
       </div>
     </div>`;
 
