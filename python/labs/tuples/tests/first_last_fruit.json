@@ -1,0 +1,6 @@
+[
+  { "args": [["apple","banana","cherry","mango"]], "expect": ["apple","mango"] },
+  { "args": [[1, 2, 3, 4, 5]], "expect": [1, 5] },
+  { "args": [["one"]], "expect": ["one","one"] },
+  { "args": [[]], "expect_exception": true, "exception_contains": "cannot be empty" }
+]

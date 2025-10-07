@@ -1,0 +1,5 @@
+[
+  { "args": [[10,20,30,40,50]], "expect": [10, [20,30,40], 50] },
+  { "args": [[10,20]], "expect": [10, [], 20] },
+  { "args": [[10]], "expect_exception": true, "exception_contains": "at least 2" }
+]

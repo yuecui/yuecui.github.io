@@ -1,0 +1,3 @@
+[
+  { "args": [], "expect_predicate": "isinstance(got, tuple) and len(got) == 4" }
+]

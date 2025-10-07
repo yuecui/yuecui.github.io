@@ -1,0 +1,4 @@
+[
+  { "args": [["apple","banana"]], "expect": true },
+  { "args": [["pear","mango"]], "expect": false }
+]

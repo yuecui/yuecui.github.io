@@ -1,0 +1,11 @@
+[
+  {
+    "args": [ [[1.0,2.0],[3.0,4.0]], ["A","B"] ],
+    "expect_predicate": "got == ((1.0,2.0,'A'), (3.0,4.0,'B'))"
+  },
+  {
+    "args": [ [[1.0,2.0]], ["A","B"] ],
+    "expect_exception": true,
+    "exception_contains": "same length"
+  }
+]
