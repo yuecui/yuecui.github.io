@@ -170,7 +170,7 @@ const CARDS = [
     name: 'find_first_occurrence',
     description: 'Binary search: first index of target in sorted tuple.',
     starter:
-`def find_first_occurrence(nums: tuple[int, ...], target: int) -> int:
+`def find_first_occurrence(nums: tuple[int, ...], target: int, start: int, stop: int) -> int:
     """Binary search: first index of target, or -1."""
     pass
 `,
@@ -181,7 +181,7 @@ const CARDS = [
     name: 'find_last_occurrence',
     description: 'Binary search: last index of target in sorted tuple.',
     starter:
-`def find_last_occurrence(nums: tuple[int, ...], target: int) -> int:
+`def find_last_occurrence(nums: tuple[int, ...], target: int, start: int, stop: int) -> int:
     """Binary search: last index of target, or -1."""
     pass
 `,
