@@ -253,7 +253,6 @@ function createPair(card) {
       <textarea></textarea>
       <div class="toolbar">
         <button class="run">▶ Run Tests</button>
-        
       </div>
     </div>`;
 
